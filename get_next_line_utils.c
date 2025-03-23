@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/03 14:00:03 by alejandj          #+#    #+#             */
-/*   Updated: 2025/03/03 14:02:12 by alejandj         ###   ########.fr       */
+/*   Created: 2025/01/29 12:59:09 by alejandj          #+#    #+#             */
+/*   Updated: 2025/03/06 12:19:48 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

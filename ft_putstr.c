@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/12 11:55:50 by alejandj          #+#    #+#             */
-/*   Updated: 2025/02/18 11:15:25 by alejandj         ###   ########.fr       */
+/*   Created: 2025/01/27 12:25:54 by alejandj          #+#    #+#             */
+/*   Updated: 2025/02/18 13:03:07 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putnbr_unsigned(unsigned int nbr)
+int	ft_putstr(char *s)
 {
+	int	i;
 	int	size;
 
+	if (!s)
+		return (ft_putstr("(null)"));
+	i = 0;
 	size = 0;
-	if (nbr == 0)
-		return (size += ft_putchar('0'));
-	if (nbr >= 10)
-		size += ft_putnbr_unsigned(nbr / 10);
-	size += ft_putchar(nbr % 10 + '0');
+	while (s[i] != '\0')
+	{
+		size += ft_putchar(s[i]);
+		i++;
+	}
 	return (size);
 }

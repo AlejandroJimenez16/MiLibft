@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/27 12:23:37 by alejandj          #+#    #+#             */
-/*   Updated: 2025/02/12 12:25:45 by alejandj         ###   ########.fr       */
+/*   Created: 2025/02/18 11:30:25 by alejandj          #+#    #+#             */
+/*   Updated: 2025/02/18 13:02:31 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putchar(char c)
+int	ft_putnbr_hex(unsigned int nbr, char *base)
 {
-	if (write(1, &c, 1) == -1)
-		return (-1);
-	return (1);
+	int	size;
+
+	size = 0;
+	if (nbr >= 16)
+		size += ft_putnbr_hex(nbr / 16, base);
+	size += ft_putchar(base[nbr % 16]);
+	return (size);
 }
