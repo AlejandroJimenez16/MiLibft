@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 02:36:11 by alejandj          #+#    #+#             */
-/*   Updated: 2025/01/23 13:58:53 by alejandj         ###   ########.fr       */
+/*   Updated: 2025/04/04 17:51:23 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,6 @@ size_t	ft_strlen(const char *s);
 # endif
 
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
 
 /*-----------LIBFT----------------------*/
 int					ft_isalpha(int c);
