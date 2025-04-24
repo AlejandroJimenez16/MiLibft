@@ -6,7 +6,7 @@
 #    By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/22 12:50:32 by alejandj          #+#    #+#              #
-#    Updated: 2025/04/04 17:50:45 by alejandj         ###   ########.fr        #
+#    Updated: 2025/04/24 14:27:21 by alejandj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRC =	ft_isalpha.c		\
 		ft_strlen.c				\
 		get_next_line.c					\
 		get_next_line_bonus.c			\
+		ft_atol.c			\
 
 OBJECTS = ${SRC:.c=.o}
 

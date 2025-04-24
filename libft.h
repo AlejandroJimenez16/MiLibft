@@ -6,31 +6,33 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 02:36:11 by alejandj          #+#    #+#             */
-/*   Updated: 2025/04/04 17:51:23 by alejandj         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:26:45 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <fcntl.h>
 # include <limits.h>
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdarg.h>
-# include <unistd.h>
-# include <fcntl.h>
+
+/*--------------ADDITIONAL--------------------------*/
+long				ft_atol(const char *nptr);
 
 /*--------------PRINTF--------------------------*/
-int		ft_printf(char const *str, ...);
-int		ft_putchar(char c);
-int		ft_putstr(char *s);
-int		ft_putnbr_dec(int nbr);
-int		ft_putnbr_hex(unsigned int nbr, char *base);
-int		ft_putnbr_unsigned(unsigned int nbr);
-int		ft_print_pointer(unsigned long nbr, char *base);
-size_t	ft_strlen(const char *s);
+int					ft_printf(char const *str, ...);
+int					ft_putchar(char c);
+int					ft_putstr(char *s);
+int					ft_putnbr_dec(int nbr);
+int					ft_putnbr_hex(unsigned int nbr, char *base);
+int					ft_putnbr_unsigned(unsigned int nbr);
+int					ft_print_pointer(unsigned long nbr, char *base);
+size_t				ft_strlen(const char *s);
 
 /*-----------GET NEXT LINE----------------------*/
 # ifndef BUFFER_SIZE
@@ -41,7 +43,7 @@ size_t	ft_strlen(const char *s);
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
+char				*get_next_line(int fd);
 
 /*-----------LIBFT----------------------*/
 int					ft_isalpha(int c);
