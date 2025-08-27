@@ -6,7 +6,7 @@
 #    By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/22 12:50:32 by alejandj          #+#    #+#              #
-#    Updated: 2025/04/24 14:27:21 by alejandj         ###   ########.fr        #
+#    Updated: 2025/08/27 13:26:46 by alejandj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,13 +76,13 @@ $(NAME): $(OBJECTS)
 	@ar rcs $(NAME) $(OBJECTS)
 	@echo "Library $(NAME) created."
 
-all: $(NAME) bonus
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -rf $(OBJECTS) $(OBJECTS_BONUS)
+	@rm -rf $(OBJECTS)
 	@echo "Object files removed."
 
 fclean: clean
